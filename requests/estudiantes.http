@@ -1,0 +1,35 @@
+@api = http://localhost:3000/estudiantes
+## Obtiene todos los estudiantes
+GET {{api}}
+
+### Agrega un estudiante
+POST {{api}}
+Content-Type: application/json
+
+{
+    "cod_estudiante":"67",
+    "nom_estudiante":"Julian",
+    "tel_estudiante":"12121222",
+    "dir_estudiante":"Calle 12A-38",
+    "edad_estudiante":32
+}
+
+### Obtiene un estudiante
+GET {{api}}/1
+
+### Elimina un estudiante
+DELETE {{api}}/67
+
+### Obtener el numero total de estudiantes
+GET {{api}}/count
+
+###Actualizar un estudiante por codigo
+PUT {{api}}/67
+Content-Type: application/json
+
+{
+    "nom_estudiante":"Julian",
+    "tel_estudiante":"44444",
+    "dir_estudiante":"Calle 12A-38",
+    "edad_estudiante":12
+}
